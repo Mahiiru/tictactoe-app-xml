@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvCurrentTurn"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-        tools:text="X" />
+        android:text="@string/x" />
 
     <GridLayout
         android:id="@+id/glTicTacToe"
@@ -84,6 +84,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="O">
                 </TextView>
 
@@ -118,6 +119,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="O">
                 </TextView>
 
@@ -152,6 +154,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="O">
                 </TextView>
 
@@ -186,6 +189,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="O">
                 </TextView>
 
@@ -220,6 +224,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="O">
                 </TextView>
 
@@ -254,6 +259,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="O">
                 </TextView>
 
@@ -288,6 +294,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="O">
                 </TextView>
 
@@ -322,6 +329,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="O">
                 </TextView>
 
@@ -356,6 +364,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="42sp"
+                    android:text=""
                     tools:text="X">
                 </TextView>
 
@@ -364,6 +373,22 @@
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
+
+    <TextView
+        android:id="@+id/tvWinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glTicTacToe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:text=""
+        tools:text="Player $type has won">
+    </TextView>
 
 
 

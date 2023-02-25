@@ -1,7 +1,7 @@
 package com.mahiiru.tictactoeapp
 
-class Game(private val playerX: Player = Player("X"),
-           private val playerO : Player = Player("O"),
+class Game(val playerX: Player = Player("X"),
+           val playerO : Player = Player("O"),
            var isGameOver : Boolean = false,
            var gameMap: Map<String,String> = mapOf("tv0x0" to "",
                "tv0x1" to "",
@@ -24,7 +24,7 @@ class Game(private val playerX: Player = Player("X"),
         }
     }
 
-    fun aPlayerHasWon() : Boolean{
+    private fun aPlayerHasWon() : Boolean{
         playerX.winner = calculatePlayerWinner(playerX.type)
         playerO.winner = calculatePlayerWinner(playerO.type)
         return (playerX.winner || playerO.winner)
@@ -59,7 +59,7 @@ class Game(private val playerX: Player = Player("X"),
             && gameMap["tv2x$index"].equals(type))
 
 
-    fun newPlay(play : String,player: String){
+    private fun newPlay(play : String,player: String){
         gameMap = (gameMap as MutableMap<String,String>).apply { put(play,player) }
     }
 

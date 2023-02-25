@@ -2,4 +2,6 @@
     <string name="app_name">Tic Tac Toe App</string>
     <string name="tic_tac_toe">Tic Tac Toe</string>
     <string name="current_turn">Current turn:</string>
+    <string name="x">X</string>
+    <string name="o">O</string>
 </resources>
