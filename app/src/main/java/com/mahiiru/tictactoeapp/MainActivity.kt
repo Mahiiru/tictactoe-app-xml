@@ -20,7 +20,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         game = Game()
         initListeners()
-        refreshGameUI()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        refreshGridUI()
     }
 
     private fun refreshGameUI() {
@@ -42,7 +46,9 @@ class MainActivity : AppCompatActivity() {
                 idKey, "id", binding.root.context.packageName
             )
         )
-        textView.text = idValue
+        if (textView != null) {
+            textView.text = idValue
+        }
     }
 
     private fun initListeners() {
